@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.requiredWidth
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -21,7 +20,7 @@ import com.example.marvelapp.R
 import com.example.marvelapp.core.theme.MarvelAppTheme
 
 @Composable
-fun SeeAllCard(
+fun SeeAllButton(
     modifier: Modifier,
     enabled: Boolean = true,
     onClick: () -> Unit,
@@ -42,11 +41,11 @@ fun SeeAllCard(
         ) {
             Image(
                 painter = painterResource(id = R.drawable.custom_see),
-                contentDescription = "Rectangle 4390",
+                contentDescription = R.string.custRect.toString(),
             )
             Image(
                 painter = painterResource(id = R.drawable.icon_right),
-                contentDescription = "Right Arrow",
+                contentDescription = R.string.ic_right.toString(),
                 contentScale = ContentScale.Inside,
                 modifier = Modifier
                     .align(alignment = Alignment.TopStart)
@@ -64,8 +63,8 @@ fun SeeAllCard(
 
 @Preview(showBackground = true)
 @Composable
-fun SeeAllCardPreview() {
+fun SeeAllButtonPreview() {
     MarvelAppTheme {
-        SeeAllCard(onClick = {}, modifier = Modifier)
+        SeeAllButton(onClick = {}, modifier = Modifier)
     }
 }

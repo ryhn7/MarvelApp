@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MarvelApp</string>
     <string name="avatar">Avatar</string>
+    <string name="custRect">Custom Rectangle</string>
+    <string name="ic_right">Icon Right</string>
 </resources>
